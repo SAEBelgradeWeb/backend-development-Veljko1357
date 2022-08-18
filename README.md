@@ -1,19 +1,19 @@
-##### VintageCarGo
-###   Veljko Kovinic
+## VintageCarGo
+####   Veljko Kovinic
 
 #### LOGIN INFORMATION:
 ##### username: admin@admin.com
 ##### password: admin
 
-or you can create a new user on the register page
+or you can create a new user on the register page and login with those credentials
 
 To start the project properly you first need to import the database.
 
-##### Project pages: 
+## Project pages: 
 ### cars:
 On the cars page you can chose to:
-1. add - create a new entry for a car
-2. edit - edit an already existing car
+1. add - create a new entry for a car - colors are preset choices from a seperate table with a foreign key in the cars table - image types are jpg, jpeg, png
+2. edit - edit an already existing car - edit everything about the selected car - it will change the image name in the directory 
 3. delete - delete a selected car 
 
 ### users: 
