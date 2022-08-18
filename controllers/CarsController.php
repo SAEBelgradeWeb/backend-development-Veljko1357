@@ -106,11 +106,9 @@ class CarsController
     public function update()
     {
         check_auth();
-        //sanitize and validate
 
-        //oldImage
+        //old Image
         $_POST['oldImageName'] = filter_var($_POST['oldImageName'], FILTER_SANITIZE_STRING);
-
 
         //id
         $_POST['id'] = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
@@ -118,8 +116,9 @@ class CarsController
             redirect('/cars');
         }
 
-        //title
+        //name
         $_POST['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+
 
 
         //price
@@ -127,6 +126,10 @@ class CarsController
         if (!filter_var($_POST['price'], FILTER_VALIDATE_FLOAT)) {
             return redirect('/cars');
         }
+
+
+
+
         if ($_FILES['image']['tmp_name'] != '' or $_FILES['image']['name'] != '') {
 
             if ($_FILES['image']['type'] == 'image/jpeg'
@@ -149,14 +152,14 @@ class CarsController
 
             }
         }
-        unlink($_POST['oldImageName']);
+        unset($_POST['oldImageName']);
         App::get('db')->update('cars', $_POST);
 
         return redirect('/cars');
 
     }
 
-    public function delete()
+    public function delete()  //couldn't get the image to remove itself from directory on deletion, but everythig else works fine
     {
         check_auth();
 
@@ -165,8 +168,9 @@ class CarsController
         return redirect('/cars');
     }
 
+
 }
 
-//
+
 
 

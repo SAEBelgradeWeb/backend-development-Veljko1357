@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(255, 239, 239);
+
+}
+
+#indexContainer {
+    position: relative;
+
+}
+
+#mainDiv {
+    position: relative;
+    background-image: url("../images/coverImg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 87vh;
+}
+
+.pDiv {
+    position: absolute;
+
+}
+
+.indexP {
+    font-size: 40px;
+    position: relative;
+    top: 15vh;
+    left: 35vw;
+    color: #EDEDED;
+    font-family: "Arial Black";
+}
+
+.indexDiv button:first-child {
+    width: 200px;
+    height: 50px;
+    top: 33vh;
+    left: 33vw;
+    position: absolute;
+}
+.indexDiv button:first-child:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+
+.indexDiv button:last-child {
+    width: 200px;
+    height: 50px;
+    top: 33vh;
+    left: 57vw;
+    position: absolute;
+}
+
+.indexDiv button:last-child:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+
+#coverImg {
+    position: absolute;
+    width: 100vw;
+    height: 87vh;
+
+}
+
+.about {
+ margin-top: 50px;
+    text-align: center;
+}
+
+#footer {
+    background-color: #F61321;
+    bottom: 0;
+    width: 100%;
+}
+
+.viewArea {
+    z-index: 60;
+}
+
+
+.footerIndex {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+
+
+
