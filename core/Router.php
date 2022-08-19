@@ -62,8 +62,18 @@ class Router
             return $controller->$method();
 
         }
+        return $this->call('PagesController','error404');
 
-        throw new Exception('No route found for this URI');
+    }
+
+    protected function call($controllerName, $methodName) {
+        $controllerName= "App\\Controllers\\" .$controllerName;
+        $controller = new $controllerName;
+        if( !method_exists($controller, $methodName)) {
+            throw new \Exception('This method does not exist on a controller');
+        }
+        return $controller->$methodName();
+
     }
 
     public function guard()
