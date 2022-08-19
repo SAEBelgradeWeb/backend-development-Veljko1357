@@ -3,8 +3,6 @@
 //index and about routes
 $router->get('', 'PagesController@home');
 $router->get('about', 'PagesController@about');
-//contact
-$router->get('contact', 'PagesController@contact');
 
 //cars routes
 $router->get('cars', 'CarsController@index');
