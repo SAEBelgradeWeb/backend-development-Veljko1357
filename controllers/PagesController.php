@@ -37,11 +37,6 @@ class PagesController
         $companyName = "My Company";
         return view('contact', compact('companyName'));
     }
+    
 
-    public function error404()
-    {
-        check_auth();
-
-        return view('404');
-    }
 }
