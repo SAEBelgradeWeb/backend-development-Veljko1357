@@ -31,12 +31,11 @@ class PagesController
         return view('about');
     }
 
-    public function contact()
+
+    public function error404()
     {
+        check_auth();
 
-        $companyName = "My Company";
-        return view('contact', compact('companyName'));
+        return view('404');
     }
-    
-
 }
