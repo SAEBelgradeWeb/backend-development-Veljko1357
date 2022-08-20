@@ -7,7 +7,7 @@
                 <h4 class="mt-3">Maybe you were looking for</h4>
                 <div class="row mt-5">
                     <div class="col-12">
-                        <a href="/orders" class="btn btn-info mr-5"">Cars</a>
+                        <a href="/cars" class="btn btn-info mr-5"">Cars</a>
                         <a href="/users" class="btn btn-info ml-5">Users</a>
                     </div>
                 </div>
